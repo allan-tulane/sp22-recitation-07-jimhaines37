@@ -31,6 +31,5 @@ Yes, Huffman coding always seems to cost less than fixed length encoding. It see
 
 - **e.**
 
-length of alphabet to the n where n is the common frequency of each element
-I expect it to cost len(alphabet)^n, where n is the frequency that all of the letters each have. This is because to obtain the Huffman cost we determine the number of binary digits required to make up 1 character and multiply this by the frequency of that character.
+To obtain the Huffman cost we determine the number of binary digits required to make up 1 character and multiply this by the frequency of that character, we do this for each character and sum them. In this situation, each frequency is the same, so any 2 characters can be selected to create a new node (like in make_huffman_tree), so we will usually have a balanced tree. This means that Huffman has a cost closer to fixed length coding in this scenario and is only a little better, not a lot better like for the above examples. 
 
